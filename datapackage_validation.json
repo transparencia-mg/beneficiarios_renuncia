@@ -1,0 +1,353 @@
+{
+  "version": "4.16.6",
+  "time": 0.208,
+  "errors": [],
+  "tasks": [
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "baselegal_creditopresumido",
+        "path": "data/baselegal_creditopresumido.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "base_normativa_para_a_concessao_de_regimes_especiais_com_o_tratamento_tributario_de_credito_presumido",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "string"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "9c2f29607f9d6d8db99b2720cb38c843",
+          "bytes": 3513,
+          "fields": 4,
+          "rows": 66
+        }
+      },
+      "time": 0.011,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [],
+      "stats": {
+        "errors": 0
+      },
+      "valid": true
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "baselegal_isencao",
+        "path": "data/baselegal_isencao.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "base_normativa_para_a_concessao_de_regimes_especiais_com_o_tratamento_tributario_de_isencao",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "string"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "fc10c119dcbdeaf6456e5025e5c9b6ac",
+          "bytes": 1575,
+          "fields": 3,
+          "rows": 33
+        }
+      },
+      "time": 0.01,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [],
+      "stats": {
+        "errors": 0
+      },
+      "valid": true
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "baselegal_reducaoaliquota",
+        "path": "data/baselegal_reducaoaliquota.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "base_normativa_para_a_concessao_de_regimes_especiais_com_o_tratamento_tributario_de_reducao_de_aliquota",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "string"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "68d525d6e0ea85717ab9e91ee01beecf",
+          "bytes": 585,
+          "fields": 3,
+          "rows": 12
+        }
+      },
+      "time": 0.009,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [],
+      "stats": {
+        "errors": 0
+      },
+      "valid": true
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "baselegal_reducaocalculo",
+        "path": "data/baselegal_reducaocalculo.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "base_normativa_para_a_concessao_de_regimes_especiais_com_o_tratamento_tributario_de_reducao_de_base_de_calculo",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "string"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "1cb74ee1294b4f8690428c6a8747faf1",
+          "bytes": 1308,
+          "fields": 4,
+          "rows": 21
+        }
+      },
+      "time": 0.011,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [],
+      "stats": {
+        "errors": 0
+      },
+      "valid": true
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "renunciafiscal_icms2025",
+        "path": "data/renunciafiscal_icms2025.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "razao_social",
+              "type": "string"
+            },
+            {
+              "name": "nucleo_cnpj",
+              "type": "integer"
+            },
+            {
+              "name": "tipo_tratamento",
+              "type": "string"
+            },
+            {
+              "name": "data_inicio",
+              "type": "date"
+            },
+            {
+              "name": "valor_renuncia_2025",
+              "type": "string"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "a5d3f4de7ecfe2386f02a3d7c29f068a",
+          "bytes": 347892,
+          "fields": 5,
+          "rows": 4101
+        }
+      },
+      "time": 0.123,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [],
+      "stats": {
+        "errors": 0
+      },
+      "valid": true
+    }
+  ],
+  "stats": {
+    "errors": 0,
+    "tasks": 5
+  },
+  "valid": true
+}
