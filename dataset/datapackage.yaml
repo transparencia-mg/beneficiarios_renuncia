@@ -1,0 +1,108 @@
+name: beneficiarios_renuncia
+owner_org: ''
+profile: data-package
+resources:
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: baselegal_creditopresumido
+    path: data/baselegal_creditopresumido.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: base_normativa_para_a_concessao_de_regimes_especiais_com_o_tratamento_tributario_de_credito_presumido
+          type: string
+        - name: unnamed_1
+          type: string
+        - name: unnamed_2
+          type: string
+        - name: unnamed_3
+          type: string
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: baselegal_isencao
+    path: data/baselegal_isencao.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: base_normativa_para_a_concessao_de_regimes_especiais_com_o_tratamento_tributario_de_isencao
+          type: string
+        - name: unnamed_1
+          type: string
+        - name: unnamed_2
+          type: string
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: baselegal_reducaoaliquota
+    path: data/baselegal_reducaoaliquota.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: base_normativa_para_a_concessao_de_regimes_especiais_com_o_tratamento_tributario_de_reducao_de_aliquota
+          type: string
+        - name: unnamed_1
+          type: string
+        - name: unnamed_2
+          type: string
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: baselegal_reducaocalculo
+    path: data/baselegal_reducaocalculo.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: base_normativa_para_a_concessao_de_regimes_especiais_com_o_tratamento_tributario_de_reducao_de_base_de_calculo
+          type: any
+        - name: unnamed_1
+          type: string
+        - name: unnamed_2
+          type: string
+        - name: unnamed_3
+          type: string
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: renunciafiscal_icms2025
+    path: data/renunciafiscal_icms2025.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: razao_social
+          type: string
+        - name: nucleo_cnpj
+          type: integer
+        - name: tipo_tratamento
+          type: string
+        - name: data_inicio
+          type: date
+        - name: valor_renuncia_2025
+          type: string
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+title: Beneficiarios_renuncia
