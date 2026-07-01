@@ -242,7 +242,9 @@ button.btn-export:hover{background-color:#1a3a5c!important;border-color:#1a3a5c!
   <div class="data-atualizacao-container">
     <div class="data-atualizacao-box">
       <i class="material-icons">event</i>
-      Dados referentes ao exercício: <span style="margin-left:3px;" id="exercicio-label">2025</span>
+      Atualizado em: <span id="data-atualizacao-header" style="margin-left:3px;">Carregando...</span>
+      &nbsp;·&nbsp;
+       <span style="margin-left:3px;" id="exercicio-label"></span>
       &nbsp;·&nbsp;
       <span id="total-registros-header" style="color:#94a3b8;font-weight:500;"></span>
     </div>
@@ -296,8 +298,8 @@ button.btn-export:hover{background-color:#1a3a5c!important;border-color:#1a3a5c!
         </div>
         <div class="col-md-4">
           <div class="metric-card">
-            <div class="metric-header"><span>Média por Empresa</span><i class="material-icons" style="opacity:.7;font-size:16px!important;">trending_up</i></div>
-            <div class="metric-body"><div class="metric-value" id="m-media">—</div><div class="metric-sublabel">Renúncia média por beneficiário (R$)</div></div>
+            <div class="metric-header"><span>Última Atualização</span><i class="material-icons" style="opacity:.7;font-size:16px!important;">event</i></div>
+            <div class="metric-body"><div class="metric-value" id="m-atualizacao">—</div><div class="metric-sublabel">Data mais recente de início de regime</div></div>
           </div>
         </div>
       </div>
@@ -347,10 +349,6 @@ button.btn-export:hover{background-color:#1a3a5c!important;border-color:#1a3a5c!
 
     <!-- ========== CONSULTA INDIVIDUAL ========== -->
     <div class="tab-pane fade" id="tab-consulta" role="tabpanel">
-
-      <div id="ci-breadcrumb" style="display:none;margin-bottom:12px;align-items:center;gap:10px;">
-        <span id="ci-breadcrumb-texto" style="font-size:12px;color:#94a3b8;font-weight:600;"></span>
-      </div>
 
       <div class="filter-container">
         <div class="filters-row">
@@ -734,6 +732,7 @@ async function carregarDados() {  showLoading('Carregando dados de renúncia fis
 
     populateAnoInicio();
     renderGeral();
+    setupDataAtualizacao();
 
     // Carrega bases legais em paralelo (silenciosamente)
     carregarBasesLegais();
@@ -795,7 +794,28 @@ function renderMetrics() {
   const bens  = filteredGeral.length;
   document.getElementById('m-total').textContent = fmtBRL(total);
   document.getElementById('m-bens').textContent  = bens.toLocaleString('pt-BR');
-  document.getElementById('m-media').textContent = fmtBRL(bens > 0 ? total / bens : 0);
+}
+
+function setupDataAtualizacao() {
+  const el = document.getElementById('data-atualizacao-header');
+  const card = document.getElementById('m-atualizacao');
+  try {
+    const datas = ALL_DATA
+      .map(d => d.data_inicio_iso || '')
+      .filter(Boolean)
+      .map(d => new Date(d))
+      .filter(d => !isNaN(d));
+
+    if (datas.length > 0) {
+      const maxDate = new Date(Math.max(...datas));
+      const dataFmt = maxDate.toLocaleDateString('pt-BR');
+      if (el)   el.textContent   = dataFmt;
+      if (card) card.textContent = dataFmt;
+      return;
+    }
+  } catch(e) {}
+  if (el)   el.textContent   = 'Não disponível';
+  if (card) card.textContent = '—';
 }
 
 function destroyChart(id) { if (charts[id]) { charts[id].destroy(); delete charts[id]; } }
@@ -893,10 +913,6 @@ function irParaConsulta(tipo) {
   document.getElementById('ci-ano-inicio').value = '';
   if (document.getElementById('ci-busca-rapida'))
     document.getElementById('ci-busca-rapida').value = '';
-  const bc = document.getElementById('ci-breadcrumb');
-  bc.style.display = 'flex';
-  document.getElementById('ci-breadcrumb-texto').textContent =
-    'Filtrando por: ' + (LABEL_TIPO[tipo] || tipo);
   consultarIndividual();
 }
 
@@ -940,7 +956,6 @@ function limparConsulta() {
   document.getElementById('ci-ano-inicio').value = '';
   if (document.getElementById('ci-busca-rapida'))
     document.getElementById('ci-busca-rapida').value = '';
-  document.getElementById('ci-breadcrumb').style.display = 'none';
   ciData = [];
   document.getElementById('ci-resultados-container').style.display = 'none';
   const emp = document.getElementById('ci-empty');
